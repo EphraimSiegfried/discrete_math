@@ -9,7 +9,7 @@
 
 ## Useful Commands
 
-Copy paste the following commands in your terminal
+Copy paste the following commands in your terminal in the root project directory
 
 **Generate new exercise folder with template in it:**
 
