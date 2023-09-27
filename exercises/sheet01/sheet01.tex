@@ -14,6 +14,7 @@
 
 \usepackage{amssymb} %% Definitions for math symbols.
 \usepackage{amsmath} %% Definitions for math symbols.
+\usepackage{amsthm} % Definiton for Proofs
 
 \usepackage{tikz}  %% Pagacke to create graphics (graphs, automata, etc.)
 \usetikzlibrary{automata} %% Tikz library to draw automata
@@ -49,11 +50,14 @@
 
 
 \section*{Exercise \homeworkNumber.2}
-
-\begin{enumerate}[(a)]
-	\item
-	\item
-\end{enumerate}
+    Proof by contradiction to establish the following theorem:
+    \begin{center}
+        For all sets $A$ and $B$: If $(A \cap B) = \emptyset$, then $(A \setminus B) = A$.
+    \end{center}
+    \begin{proof}
+        Assume if $A \cap B = \emptyset$, then $A\setminus B \neq A$ \\
+        Since $(A \setminus B) \neq A$ there is a $x \in B$ that's also $x \in A$. But since $A \cap B = \emptyset$ this is impossible. Hence the original statement must hold.
+    \end{proof}
 
 
 
@@ -67,11 +71,12 @@
 
 
 \section*{Exercise \homeworkNumber.4}
+    We examine the following statement:
+    \begin{center}
+        For all sets A, B and C: if $A \subseteq (B \cup C)$, then $A \subseteq B$ or $A \subseteq C$.
+    \end{center}
+        We choose a set $A = B \cup C$ where $B \neq C$. It follows that $A \not\subseteq B$ and $A \not\subseteq C$ since B and C are now strict subsets of A. Since $A \subseteq (B \cap C)$ holds this contradicts the statement.
 
-\begin{enumerate}[(a)]
-	\item
-	\item
-\end{enumerate}
 
 
 
