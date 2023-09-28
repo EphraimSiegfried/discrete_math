@@ -41,41 +41,59 @@
 
 
 \section*{Exercise \homeworkNumber.1}
+We will proof the following statement with a direct proof:
+\begin{center}
+	For all sets \( A, B, C \) it holds that \( (A \cap B) \cup (A \cap C) \subset A \cap (B \cup C) \)
+\end{center}
 
-\begin{enumerate}[(a)]
-	\item
-	\item
-\end{enumerate}
-
-
+\begin{proof}
+	Let \( A, B, C \) be arbitrary sets. We will show that \( x \in  (A \cap B) \cup (A \cap C)\) implies \( x \in A \cap (B \cup C)\).
+	\\
+	\\
+	Consider any \( x \in (A \cap B) \cup (A \cap C) \).
+	By the definition of the union it holds that \( x \in (A \cap B) \) or \( x \in (A \cap C) \).
+	With the definition of the intersection this means that \( (x \in A \text{ and } x \in B) \text{ or } (x \in A \text{ and } x \in  C) \).
+	In both cases of the disjunction we have that \( x \in A \),
+	therefore this implies that \( x \in  A \text{ and } (x \in A \text{ or }x \in C) \),
+	which is equivalent to \( x \in A \cap (A \cup B) \).
+\end{proof}
 
 \section*{Exercise \homeworkNumber.2}
-    Proof by contradiction to establish the following theorem:
-    \begin{center}
-        For all sets $A$ and $B$: If $(A \cap B) = \emptyset$, then $(A \setminus B) = A$.
-    \end{center}
-    \begin{proof}
-        Assume if $A \cap B = \emptyset$, then $A\setminus B \neq A$ \\
-        Since $(A \setminus B) \neq A$ there is a $x \in B$ that's also $x \in A$. But since $A \cap B = \emptyset$ this is impossible. Hence the original statement must hold.
-    \end{proof}
+Proof by contradiction to establish the following theorem:
+\begin{center}
+	For all sets $A$ and $B$: If $(A \cap B) = \emptyset$, then $(A \setminus B) = A$.
+\end{center}
+\begin{proof}
+	Assume if $A \cap B = \emptyset$, then $A\setminus B \neq A$ \\
+	Since $(A \setminus B) \neq A$ there is a $x \in B$ that's also $x \in A$. But since $A \cap B = \emptyset$ this is impossible. Hence the original statement must hold.
+\end{proof}
 
 
 
 \section*{Exercise \homeworkNumber.3}
+We will proof the following statement by contrapositive:
+\begin{center}
+	For all sets \( A,B \) we have if \( A \cup B = B \) then \( A \subseteq B \)
+\end{center}
+\begin{proof}
+	Let \( A,B \) be arbitrary sets.
+	We will show that if \( A \nsubseteq B  \) then \( A \cup B \neq B \).
+	Since \( A \nsubseteq B \) there exists at least one \( x \) with \( x \in A \) and \( x \not\in B \).
+	Note that \( A \subseteq A \cup B \) since all elements of \( A \) are elements of \( A \) or \( B \).
+	This means that \( A \cup B \) contains at least one element which is not in \( B \).
+	Therefore not all elements of \( A \cup B \) are elements of B, thus \( A \cup B \nsubseteq B \)
+	and by definition \( A \cup B \neq B \).
 
-\begin{enumerate}[(a)]
-	\item
-	\item
-\end{enumerate}
+\end{proof}
 
 
 
 \section*{Exercise \homeworkNumber.4}
-    We examine the following statement:
-    \begin{center}
-        For all sets A, B and C: if $A \subseteq (B \cup C)$, then $A \subseteq B$ or $A \subseteq C$.
-    \end{center}
-        We choose a set $A = B \cup C$ where $B \neq C$ and $B,C \neq \emptyset$. It follows that $A \not\subseteq B$ and $A \not\subseteq C$ since B and C are now strict subsets of A. Since $A \subseteq (B \cap C)$ holds this contradicts the statement.
+We examine the following statement:
+\begin{center}
+	For all sets A, B and C: if $A \subseteq (B \cup C)$, then $A \subseteq B$ or $A \subseteq C$.
+\end{center}
+We choose a set $A = B \cup C$ where $B \neq C$ and $B,C \neq \emptyset$. It follows that $A \not\subseteq B$ and $A \not\subseteq C$ since B and C are now strict subsets of A. Since $A \subseteq (B \cap C)$ holds this contradicts the statement.
 
 
 
