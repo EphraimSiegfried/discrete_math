@@ -20,6 +20,9 @@
 \usetikzlibrary{automata} %% Tikz library to draw automata
 \usetikzlibrary{arrows}   %% Tikz library for nicer arrow heads
 
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{axiom}{Axiom}
 
 %% Left side of header
 \lhead{\course\\\semester\\Exercise \homeworkNumber}
@@ -43,7 +46,30 @@
 
 
 \section*{Exercise \homeworkNumber.2}
+We will prove the following statement by structural induction:
+\begin{theorem}
+	For all binary trees \( B \) it holds that \( \text{edges}(B) = 2 \cdot \text{leaves}(B) - 2 \).
+\end{theorem}
 
+\begin{proof}
+	\textbf{Base Case:}
+	\begin{align*}
+		edges(\Box) = 0 = 2 - 2 = 2 * leaves(\Box) - 2 .     \\
+		\leadsto \text{Statement is true for the base case } \\
+	\end{align*}
+	\textbf{Induction Hypothesis:} Assume that for a composite tree \( \left< L, \circ, R \right> \) the statement is true for the subtrees \( L \) and \( R \).
+	\\
+	\\
+	\textbf{Inductive Step:}
+	Consider a composite tree \( B = \langle L, \circ, R \rangle \).
+	\begin{align*}
+		edges(B) & = edges(L) + edges(B) + 2                                          \\
+		         & \stackrel{IH}{=} 2 \cdot leaves(L) - 2 + 2 \cdot leaves(R) - 2 + 2 \\
+		         & = 2 \cdot (leaves(L) + leaves(R)) -2                               \\
+		         & = 2 \cdot leaves(B) - 2
+	\end{align*}
+
+\end{proof}
 
 \section*{Exercise \homeworkNumber.3}
 
