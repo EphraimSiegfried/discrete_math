@@ -20,42 +20,42 @@ We will use sets to illustrate some proof techniques. For this purpose, we start
 
 \begin{definition}
 
-A \emph{set} is an unordered collection of distinct objects.
-\smallskip
+	A \emph{set} is an unordered collection of distinct objects.
+	\smallskip
 
-The objects in a set are called the \emph{elements} of the set. A set is said
-to \emph{contain} its elements.\smallskip
+	The objects in a set are called the \emph{elements} of the set. A set is said
+	to \emph{contain} its elements.\smallskip
 
-We write $x\in S$ to indicate that $x$ is an element of set $S$, and $x\notin
-S$ to indicate that $S$ does not contain $x$.
-\smallskip
+	We write $x\in S$ to indicate that $x$ is an element of set $S$, and $x\notin
+		S$ to indicate that $S$ does not contain $x$.
+	\smallskip
 
-The set that does not contain any elements is the \emph{empty set} $\emptyset$.
+	The set that does not contain any elements is the \emph{empty set} $\emptyset$.
 \end{definition}
 
 We can express sets in terms of other sets:
 
 \begin{definition}
-For sets $A$ and $B$,
-\begin{itemize}
-  \item the \emph{union} $A\cup B$ is the smallest set that contains all
-    elements of $A$\\and all elements of $B$;
-  \item the \emph{intersection} $A\cap B$ is the smallest set that contains all
-    elements of $A$ that are elements of $B$;
-  \item the \emph{set difference} $A\setminus B$ is the smallest set that
-    contains all elements of $A$ that are \emph{not} elements of $B$.
-\end{itemize}
+	For sets $A$ and $B$,
+	\begin{itemize}
+		\item the \emph{union} $A\cup B$ is the smallest set that contains all
+		      elements of $A$\\and all elements of $B$;
+		\item the \emph{intersection} $A\cap B$ is the smallest set that contains all
+		      elements of $A$ that are elements of $B$;
+		\item the \emph{set difference} $A\setminus B$ is the smallest set that
+		      contains all elements of $A$ that are \emph{not} elements of $B$.
+	\end{itemize}
 \end{definition}
 
 We also can compare sets. Two interesting properties are equality and the subset relation:
 
 \begin{definition}
-Two sets $A$ and $B$ are \emph{equal} (written $A = B$) if they contain exactly
-the same elements.
-\medskip
+	Two sets $A$ and $B$ are \emph{equal} (written $A = B$) if they contain exactly
+	the same elements.
+	\medskip
 
-We say that set $A$ is a \emph{subset} of set $B$ (written $A\subseteq B$) if
-every element of $A$ is an element of $B$.
+	We say that set $A$ is a \emph{subset} of set $B$ (written $A\subseteq B$) if
+	every element of $A$ is an element of $B$.
 \end{definition}
 
 \clearpage
@@ -64,68 +64,68 @@ every element of $A$ is an element of $B$.
 We will use a direct proof to establish the following theorem:
 
 \begin{theorem}
-    For all sets $A$, $B$ and $C$ it holds that
-    \[A\cap(B\cup C) = (A\cap B) \cup (A\cap C).\]
+	For all sets $A$, $B$ and $C$ it holds that
+	\[A\cap(B\cup C) = (A\cap B) \cup (A\cap C).\]
 \end{theorem}
 \bigskip
 
 \begin{proof}
-Let $A$, $B$ and $C$ be arbitrary sets. We will show separately that 
+	Let $A$, $B$ and $C$ be arbitrary sets. We will show separately that
 
-\begin{itemize}
-    \item  $x\in A\cap (B\cup C)$ implies $x\in (A\cap B)\cup(A\cap C)$ and
-      that
-    \item $x\in (A\cap B) \cup (A\cap C)$ implies $x\in A\cap(B\cup C)$.
-\end{itemize}
+	\begin{itemize}
+		\item  $x\in A\cap (B\cup C)$ implies $x\in (A\cap B)\cup(A\cap C)$ and
+		      that
+		\item $x\in (A\cap B) \cup (A\cap C)$ implies $x\in A\cap(B\cup C)$.
+	\end{itemize}
 
-We first show that $x\in A\cap (B\cup C)$ implies $x\in (A\cap B)\cup(A\cap
-C)$:
-\smallskip
+	We first show that $x\in A\cap (B\cup C)$ implies $x\in (A\cap B)\cup(A\cap
+		C)$:
+	\smallskip
 
-Consider any $x\in A\cap(B\cup C)$. By the definition of the intersection it holds that
-$x\in A$ and that $x\in (B\cup C)$. We make a case distinction between $x\in B$
-and $x\notin B$:
-\begin{description}
-    \item [Case 1 ($x\in B$):] As $x\in A$ is true, it holds in this case that
-      $x\in(A\cap B)$.
-    \item [Case 2 ($x\notin B)$:] From $x\in (B\cup C)$ it follows for this
-      case that $x\in C$. This implies together with $x\in A$ that $x\in (A\cap C)$.
-\end{description}
+	Consider any $x\in A\cap(B\cup C)$. By the definition of the intersection it holds that
+	$x\in A$ and that $x\in (B\cup C)$. We make a case distinction between $x\in B$
+	and $x\notin B$:
+	\begin{description}
+		\item [Case 1 ($x\in B$):] As $x\in A$ is true, it holds in this case that
+		      $x\in(A\cap B)$.
+		\item [Case 2 ($x\notin B)$:] From $x\in (B\cup C)$ it follows for this
+		      case that $x\in C$. This implies together with $x\in A$ that $x\in (A\cap C)$.
+	\end{description}
 
-In both cases it holds that $x\in A\cap B$ or $x\in A\cap C$, and we conclude
-that $x\in(A\cap B) \cup (A\cap C)$.
-\smallskip
+	In both cases it holds that $x\in A\cap B$ or $x\in A\cap C$, and we conclude
+	that $x\in(A\cap B) \cup (A\cap C)$.
+	\smallskip
 
-As $x$ was chosen arbitrarily from $A\cap(B\cup C)$ we have shown that every
-element of $A\cap (B\cup C)$ is an element of $(A\cap B)\cup (A\cap C)$.
-\bigskip
+	As $x$ was chosen arbitrarily from $A\cap(B\cup C)$ we have shown that every
+	element of $A\cap (B\cup C)$ is an element of $(A\cap B)\cup (A\cap C)$.
+	\bigskip
 
-We will now show that every element of $(A\cap B) \cup (A\cap C)$ is an element
-of $A\cap (B\cup C)$.
-\bigskip
+	We will now show that every element of $(A\cap B) \cup (A\cap C)$ is an element
+	of $A\cap (B\cup C)$.
+	\bigskip
 
-$\dots$ \textbf{[Homework assignment] $\dots$}
-\bigskip
+	$\dots$ \textbf{[Homework assignment] $\dots$}
+	\bigskip
 
-Overall we have shown for arbitrary sets $A,B$ and $C$ that $x \in A\cap(B\cup
-C)$ if and only if $x\in (A\cap B)\cup (A\cap C)$, which concludes the proof of
-the theorem.
+	Overall we have shown for arbitrary sets $A,B$ and $C$ that $x \in A\cap(B\cup
+		C)$ if and only if $x\in (A\cap B)\cup (A\cap C)$, which concludes the proof of
+	the theorem.
 \end{proof}
 
 \section{Example: Proof by Contradiction}
 We will use a proof by contradiction to establish the following theorem:
 \begin{theorem}
-For any sets $A$ and $B$: If $A\setminus B = \emptyset$ then $A\subseteq B$.
+	For any sets $A$ and $B$: If $A\setminus B = \emptyset$ then $A\subseteq B$.
 \end{theorem}
 \bigskip
 
 \begin{proof}
-Assume that there are sets $A$ and $B$ with $A\setminus B = \emptyset$ and
-$A\not\subseteq B$.
+	Assume that there are sets $A$ and $B$ with $A\setminus B = \emptyset$ and
+	$A\not\subseteq B$.
 
-Let $A$ and $B$ be such sets. Since $A\not\subseteq B$ there is some $x\in A$
-such that $x\not\in B$. For this $x$ it holds that $x\in A\setminus B$. This is
-a contradiction to $A\setminus B=\emptyset$.
+	Let $A$ and $B$ be such sets. Since $A\not\subseteq B$ there is some $x\in A$
+	such that $x\not\in B$. For this $x$ it holds that $x\in A\setminus B$. This is
+	a contradiction to $A\setminus B=\emptyset$.
 \end{proof}
 \pagebreak
 
@@ -133,20 +133,20 @@ a contradiction to $A\setminus B=\emptyset$.
 We will prove the following theorem by contrapositive:
 
 \begin{theorem}
-For any sets $A$ and $B$: If $A\subseteq B$ then $A\setminus B = \emptyset$.
+	For any sets $A$ and $B$: If $A\subseteq B$ then $A\setminus B = \emptyset$.
 \end{theorem}
 \bigskip
 
 
 \begin{proof}
-We prove the theorem by contrapositive, showing for any sets $A$ and $B$ that
-if $A\setminus B\neq \emptyset$ then $A\not\subseteq B$.
+	We prove the theorem by contrapositive, showing for any sets $A$ and $B$ that
+	if $A\setminus B\neq \emptyset$ then $A\not\subseteq B$.
 
-Let $A$ and $B$ be arbitrary sets with $A\setminus B\neq \emptyset$. As the set
-difference is not empty, there is at least one $x$ with $x\in A\setminus B$. By
-the definition of the set difference ($\setminus$), it holds that $x\in A$ and
-$x\notin B$. Hence, not all elements of $A$ are elements of $B$, so it does not
-hold that $A\subseteq B$.
+	Let $A$ and $B$ be arbitrary sets with $A\setminus B\neq \emptyset$. As the set
+	difference is not empty, there is at least one $x$ with $x\in A\setminus B$. By
+	the definition of the set difference ($\setminus$), it holds that $x\in A$ and
+	$x\notin B$. Hence, not all elements of $A$ are elements of $B$, so it does not
+	hold that $A\subseteq B$.
 \end{proof}
 
 \end{document}
