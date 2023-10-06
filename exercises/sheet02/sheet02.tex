@@ -40,7 +40,25 @@
 
 
 \section*{Exercise \homeworkNumber.1}
-
+We examine the following theorem: \\[5pt]
+$\sum\limits_{i=0}^n i = \frac{n*(n+1)}{2} \quad \forall \quad n\in \mathbb N_0$
+\\
+\begin{proof}
+	Mathematical induction over n:\\[5pt]
+	\textbf{Basis $n=0$:}\\
+	\begin{flalign*} 
+		0&=\frac{0*1}{2} &\\
+		0 &= 0 &
+	\end{flalign*}
+	\textbf{Induction Hypothesis: } \\[5pt]
+	$\sum\limits_{i=0}^k i = \frac{k*(k+1)}{2} $ for $k = n - 1$ \\[5pt]
+	\textbf{Inductive Step:} $n-1 \rightarrow{} n$ \\[10pt]
+	\begin{alignat*}{3}
+		&& \sum\limits_{k=1}^n k^3 &= \frac{n^2}{4}(n+1)^2 \quad && \vert +(n+1)^3 \\
+		\iff \quad && \sum\limits_{k=1}^{n+1} k^3 &= \frac{n^2}{4}(n+1)^2 + (n+1)^3 \quad && \\
+		\iff \quad && \sum\limits_{k=1}^{n+1} k^3 &= \frac{n^2}{4}(n^2+2n+1) + (n+1)^3 \quad && \\
+	\end{alignat*}
+\end{proof}
 
 \section*{Exercise \homeworkNumber.2}
 
