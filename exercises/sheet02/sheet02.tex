@@ -38,9 +38,6 @@
 \newcommand{\course}{Discrete Mathematics in Computer Science}
 \newcommand{\homeworkNumber}{2}
 
-\newcommand\myeq{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily IH}}}{=}}} %% command for = with text
-
-
 \begin{document}
 
 
@@ -59,12 +56,12 @@ $\sum\limits_{i=0}^n i = \frac{n*(n+1)}{2} \quad \forall \quad n\in \mathbb N_0$
 	$\sum\limits_{i=0}^k i = \frac{k*(k+1)}{2} $ for $k = n - 1$ \\[5pt]
 	\textbf{Inductive Step:} $n-1 \rightarrow{} n$ \\[10pt]
 	\begin{align*}
-		 & \sum\limits_{i=0}^{n-1} i = \sum\limits_{i=0}^n i - n \myeq \frac{n*(n+1)}{2} - n \\[5pt]
-		 & \iff \quad \frac{n*(n+1)}{2} - \frac{2n}{2}  \quad                                \\[5pt]
-		 & \iff \quad \frac{n*(n+1)-2n}{2} \quad                                             \\[5pt]
-		 & \iff \quad \frac{n*(n+1-2)}{2} \quad                                              \\[5pt]
-		 & \iff \quad \frac{n*(n-1)}{2} \quad                                                \\[5pt]
-		 & \iff \quad \frac{n-1*((n-1)+1)}{2} \quad                                          \\[5pt]
+		 & \sum\limits_{i=0}^{n-1} i = \sum\limits_{i=0}^n i - n \stackrel{IH}{=} \frac{n*(n+1)}{2} - n \\[5pt]
+		 & \iff \quad \frac{n*(n+1)}{2} - \frac{2n}{2}  \\[5pt]
+		 & \iff \quad \frac{n*(n+1)-2n}{2}				\\[5pt]
+		 & \iff \quad \frac{n*(n+1-2)}{2}				\\[5pt]
+		 & \iff \quad \frac{n*(n-1)}{2}					\\[5pt]
+		 & \iff \quad \frac{n-1*((n-1)+1)}{2}			\\[5pt]
 	\end{align*}
 \end{proof}
 \newpage
@@ -97,7 +94,38 @@ We will prove the following statement by structural induction:
 \newpage
 
 \section*{Exercise \homeworkNumber.3}
+A set of words 'S' is defined as follows:
+\begin{itemize}
+	\item
+		'baa' is in S.
+	\item
+		'c' is in S.
+	\item
+		If x and y are in S, then so is xyx. 
+	\item
+		If x is in S, then so is 'b'x'b'. 
+\end{itemize}
+\begin{theorem}
+	All words in S have odd length.
+\end{theorem}
+We prove by structural induction:
+\begin{proof}
+	\textbf{Basis:}\\
+		'baa' and 'c' are in S, their length is 3 and 1, both of these numbers are odd.\\[10pt]
+	\textbf{Induction Hypothesis:}\\
+		There are words $x,y \in S$ that are of odd length.\\[10pt]
+	\textbf{Inductive Step:}
+		\begin{description}
+			\item[case1:] We apply the transformation xyx to two words x and y.
+			Considering only the length of the words we can rewrite this as 2*x + 1*y.
+			Using the Hypothesis that x and y are odd words we can reinterpreted this as 2*odd + 1*odd = 3 * odd.
+			Since 3 is an odd number we know odd*odd = odd.
+			\item[case2:] We apply the transformation 'b' x 'b' to the word x.
+			Using the Hypothesis that x is of odd length and 'b' being odd length of 1 then we can rewrite the length as 2*odd + 1* odd = 3*odd.
+			Since 3 is an odd number we know odd*odd = odd.
+		\end{description}
 
+\end{proof}
 \newpage
 
 \section*{Exercise \homeworkNumber.4}
