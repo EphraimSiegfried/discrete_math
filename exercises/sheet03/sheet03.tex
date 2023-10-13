@@ -14,6 +14,7 @@
 
 \usepackage{amssymb} %% Definitions for math symbols.
 \usepackage{amsmath} %% Definitions for math symbols.
+\usepackage{amsthm} % Definiton for Proofs
 
 \usepackage{tikz}  %% Pagacke to create graphics (graphs, automata, etc.)
 \usetikzlibrary{automata} %% Tikz library to draw automata
@@ -32,7 +33,7 @@
 \newcommand{\authorname}{Alex Lutsch\\Kemal Yönet\\Ephraim Siegfried }
 \newcommand{\semester}{Fall Semester 2023}
 \newcommand{\course}{Discrete Mathematics in Computer Science}
-\newcommand{\homeworkNumber}{1}
+\newcommand{\homeworkNumber}{3}
 
 
 \begin{document}
@@ -40,19 +41,26 @@
 
 
 \section*{Exercise \homeworkNumber.1}
+$A,B \subseteq \{1,...,10\}$ \\
+$\lvert B \lvert = 3$, so we choose arbitrarily $B = \{1,2,3\}$. \\
+$\lvert \mathcal P(A) \lvert = 16  \iff \lvert A \lvert = \log_2(16) = 4$ \\
+$\lvert A \cup B \lvert = 5$ so to reach sum of 5, A has to share 2 Elements with B while having 4 in total.\\
+$A = \{2,3,4,5\}$ satisfies these conditions.
 
-\begin{enumerate}[(a)]
-	\item
-	\item
-\end{enumerate}
 
 
 
 \section*{Exercise \homeworkNumber.2}
 
 \begin{enumerate}[(a)]
+	\item $\{e1,e4,e6,e7\} = 01001011$
+	\item $01110110 = \{e1,e2,e3,e5,e6\}$
 	\item
-	\item
+		$A \cup B \iff $ A bitwise OR B\\
+		$A \cap B \iff $ A bitwise AND B\\
+		$ \lnot A \iff $ bitwise NOT A\\
+
+
 \end{enumerate}
 
 
@@ -73,6 +81,13 @@
 	\item
 \end{enumerate}
 
+\section*{Exercise \homeworkNumber.5}
+\begin{proof}
+We want to show that $\mathbb Q$ is countable. We already know that $\mathbb Q_+$ is countable. \\
+We want to form a bijection from $\mathbb Q_+$ to $\mathbb Q_-$ to show that $\lvert \mathbb Q_+ \lvert = \lvert \mathbb Q_- \lvert$ and hence $\mathbb Q_-$ is countable too.
+We define $f:\mathbb Q_+ \rightarrow \mathbb Q_-$ as $f(x) = -x$. \\
+We can define $\mathbb Q = \mathbb Q_+ \cup \mathbb Q_-$, and we know that the union of two countable sets is countable. \\
+\end{proof}
 
 
 \end{document}
