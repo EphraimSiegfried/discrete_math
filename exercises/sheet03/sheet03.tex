@@ -64,11 +64,21 @@ We will refute the statement for all sets \( A,B \) it holds that \( |A| < |A \c
 
 \section*{Exercise \homeworkNumber.4}
 
-\begin{enumerate}[(a)]
-	\item
-	\item
-\end{enumerate}
+Let \( g \colon \left\{ n \in \mathbb{N} \mid n \text{ mod } 2 = 0 \\ \right\} \to \mathbb{Z} \colon g(n) = -\frac{n}{2} \).
+The function \( g(x) \) is a bijective function because it maps every
+even natural number to every negated natural number (which is injective and surjective). \\
+Let \( s \colon \left\{ n \in \mathbb{N} \mid n \text{ mod } 2 \neq  0 \\ \right\} \to \mathbb{Z} \colon g(n) = \frac{n+1}{2} \).
+The function \( s(x) \) is a bijective function because it maps every odd natural number to a natural number
+(it is a subset of the natural numbers). \\
+The union of two bijective functions is bijective, therefore
 
-
-
+\begin{equation*}
+	f(n) =
+	\begin{cases}
+		-\frac{n}{2},  & \text{if } n \text{ is even}, \\
+		\frac{n+1}{2}, & \text{otherwise},
+	\end{cases}
+	\quad \text{for } n \in \mathbb{N},
+\end{equation*}
+is a bijective function from \( \mathbb{N} \) to \( \mathbb{Z} \) and thus \( \mathbb{Z} \) is countable.
 \end{document}
