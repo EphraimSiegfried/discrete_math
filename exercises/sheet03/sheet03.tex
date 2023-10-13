@@ -14,12 +14,9 @@
 
 \usepackage{amssymb} %% Definitions for math symbols.
 \usepackage{amsmath} %% Definitions for math symbols.
-<<<<<<< HEAD
 \usepackage{pifont}
-=======
 \usepackage{amsthm} % Definiton for Proofs
 
->>>>>>> refs/remotes/origin/master
 \usepackage{tikz}  %% Pagacke to create graphics (graphs, automata, etc.)
 \usetikzlibrary{automata} %% Tikz library to draw automata
 \usetikzlibrary{arrows}   %% Tikz library for nicer arrow heads
@@ -62,9 +59,9 @@ $A = \{2,3,4,5\}$ satisfies these conditions.
 	\item $\{e1,e4,e6,e7\} = 01001011$
 	\item $01110110 = \{e1,e2,e3,e5,e6\}$
 	\item
-		$A \cup B \iff $ A bitwise OR B\\
-		$A \cap B \iff $ A bitwise AND B\\
-		$ \lnot A \iff $ bitwise NOT A\\
+	      $A \cup B \iff $ A bitwise OR B\\
+	      $A \cap B \iff $ A bitwise AND B\\
+	      $ \lnot A \iff $ bitwise NOT A\\
 
 
 \end{enumerate}
@@ -97,7 +94,12 @@ is a bijective function from \( \mathbb{N} \) to \( \mathbb{Z} \) and thus \( \m
 
 
 \section*{Exercise \homeworkNumber.5}
-
+\begin{proof}
+	We want to show that $\mathbb Q$ is countable. We already know that $\mathbb Q_+$ is countable. \\
+	We want to form a bijection from $\mathbb Q_+$ to $\mathbb Q_-$ to show that $\lvert \mathbb Q_+ \lvert = \lvert \mathbb Q_- \lvert$ and hence $\mathbb Q_-$ is countable too.
+	We define $f:\mathbb Q_+ \rightarrow \mathbb Q_-$ as $f(x) = -x$. \\
+	We can define $\mathbb Q = \mathbb Q_+ \cup \mathbb Q_-$, and we know that the union of two countable sets is countable. \\
+\end{proof}
 
 \section*{Exercise \homeworkNumber.6}
 I will first proof that the set \( S \) containing all finite strings that consist
@@ -109,13 +111,6 @@ By mapping each string to a unique natural number based on its position in the c
 Thus, the set \( S \) is countable. \\
 Since all strings in the set of the tarradiddles \( T \) consist of symbols from \( \Sigma \) we have that \( T \subseteq S \). Because the subset of a countable set is countable, \( T \) is countable.
 
-\section*{Exercise \homeworkNumber.5}
-\begin{proof}
-We want to show that $\mathbb Q$ is countable. We already know that $\mathbb Q_+$ is countable. \\
-We want to form a bijection from $\mathbb Q_+$ to $\mathbb Q_-$ to show that $\lvert \mathbb Q_+ \lvert = \lvert \mathbb Q_- \lvert$ and hence $\mathbb Q_-$ is countable too.
-We define $f:\mathbb Q_+ \rightarrow \mathbb Q_-$ as $f(x) = -x$. \\
-We can define $\mathbb Q = \mathbb Q_+ \cup \mathbb Q_-$, and we know that the union of two countable sets is countable. \\
-\end{proof}
 
 
 \end{document}
