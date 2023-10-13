@@ -30,7 +30,7 @@
 %% Page style that uses the header
 \pagestyle{fancy}
 
-\newcommand{\authorname}{Alex Lutsch\\Kemal Yönet\\Ephraim Siegfried }
+\newcommand{\authorname}{Alex Lutsch\\Ephraim Siegfried }
 \newcommand{\semester}{Fall Semester 2023}
 \newcommand{\course}{Discrete Mathematics in Computer Science}
 \newcommand{\homeworkNumber}{3}
@@ -66,20 +66,35 @@ $A = \{2,3,4,5\}$ satisfies these conditions.
 
 
 \section*{Exercise \homeworkNumber.3}
-
-\begin{enumerate}[(a)]
-	\item
-	\item
-\end{enumerate}
+We will refute the statement for all sets \( A,B \) it holds that \( |A| < |A \cup B| \). Let \( A = B \), then we have \( A = A \cup B \). In this case it holds that \( |A| = |A \cup B| \), which contradicts the statement.
 
 
 
 \section*{Exercise \homeworkNumber.4}
 
-\begin{enumerate}[(a)]
-	\item
-	\item
-\end{enumerate}
+Let \( g \colon \left\{ n \in \mathbb{N} \mid n \text{ mod } 2 = 0 \\ \right\} \to \mathbb{Z} \colon g(n) = -\frac{n}{2} \).
+The function \( g(x) \) is a bijective function because it maps every
+even natural number to every negated natural number (which is injective and surjective). \\
+Let \( s \colon \left\{ n \in \mathbb{N} \mid n \text{ mod } 2 \neq  0 \\ \right\} \to \mathbb{Z} \colon g(n) = \frac{n+1}{2} \).
+The function \( s(x) \) is a bijective function because it maps every odd natural number to a natural number
+(it is a subset of the natural numbers). \\
+The union of two bijective functions is bijective, therefore
+\begin{equation*}
+	f(n) =
+	\begin{cases}
+		-\frac{n}{2},  & \text{if } n \text{ is even}, \\
+		\frac{n+1}{2}, & \text{otherwise},
+	\end{cases}
+	\quad \text{for } n \in \mathbb{N},
+\end{equation*}
+is a bijective function from \( \mathbb{N} \) to \( \mathbb{Z} \) and thus \( \mathbb{Z} \) is countable.
+
+
+\section*{Exercise \homeworkNumber.5}
+
+
+\section*{Exercise \homeworkNumber.6}
+
 
 \section*{Exercise \homeworkNumber.5}
 \begin{proof}
