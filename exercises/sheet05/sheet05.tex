@@ -51,8 +51,16 @@
 \section*{Exercise \homeworkNumber.2}
 
 \begin{enumerate}[(a)]
-	\item
-	\item
+	\item Since the equivalence relation \( \sim \) is reflexive, we have that for all \( x \in S \) that \( (x, x) \in \sim \).
+	      Therefore, for any equivalence class \( [x]_{\sim} =  \left\{ y \in S \mid x \sim y \right\}  \) there must exist a \( y \in [x]_{\sim}\) with \( x = y \).
+	      Each equivalence class of the set \( E = \left\{  [x]_{\sim} \mid x \in S \right\} \) has the latter property.
+	      Therefore, every element of \( S \) is in some equivalence class in \( E \).
+	\item I will show this by an indirect proof.
+	      Assume there is are \( x, y, z \in S\) with \( x \in [y]_{\sim}, x \in [z]_{\sim} \) and \( [y]_{\sim} \neq [z]_{\sim} \).
+	      Because equivalence relations are symmetric, we have that for arbitrary \( s,q \) that \( s \in [q]_{\sim} \) iff \( q \in [s]_{\sim} \).
+	      Therefore \( x \in [y]_{\sim} \leftrightarrow y \in [x]_{\sim}\) and \( x \in [z]_{\sim} \leftrightarrow z \in [x]_{\sim}\).
+	      We have a contradicition, since we assumed \( [y]_{\sim} \neq [z]_{\sim} \) which is equivalent to \( [x]_{\sim} \neq [x]_{\sim} \), but it is the case that \( [x]_{\sim} = [x]_{\sim} \) .
+	      Thus every element of \( S \) is in at most one equivalence class in \( E \).
 \end{enumerate}
 
 
