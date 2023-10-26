@@ -32,7 +32,7 @@
 \newcommand{\authorname}{Alex Lutsch\\Ephraim Siegfried }
 \newcommand{\semester}{Fall Semester 2023}
 \newcommand{\course}{Discrete Mathematics in Computer Science}
-\newcommand{\homeworkNumber}{1}
+\newcommand{\homeworkNumber}{5}
 
 
 \begin{document}
@@ -64,8 +64,19 @@
 \section*{Exercise \homeworkNumber.4}
 
 \begin{enumerate}[(a)]
-	\item
-	\item
+	\item Let \( R \) be a total order over an arbitrary set \( S \) and let \( x,y \in S \).
+	      If \( x = y \), then the statements \( xRy  \) and \( yRx \) are the same statements and thus count as only one statement.
+	      If \( x \neq y \), then we have, because partial relations are antisymmetric, that if \( xRy \in R\), then \( yRx \not\in R\) and vice versa.
+	      Therefore, either \( xRy \in R \) xor \( yRx \in R \) is true.
+	\item I will disprove this statement by a counterexample.
+	      Let \( S = \left\{ a,b \right\}  \).
+	      The only strict orders over S which exist are \( R_{1} = \left\{ (a,b) \right\}  \), \( R_{2} = \left\{ (b, a) \right\}  \). \\
+	      Let's look at the strict order \( R_{1} \).
+	      Here \( a \) is minimal, since there is no \( y \in R_{1} \) with \( yR_{1}a \).
+	      The element \( a \) is not maximal, since there exists \( y \in R_{1} \) with \( aR_{1}y \) which is \( y = b \). \\
+	      An analogous argument can be made for \( R_{2} \).
+	      Therefore, there does not exist a strict order over S where all \( x \in S \) are both minimal and maximal. Thus the statement is false.
+
 \end{enumerate}
 
 
