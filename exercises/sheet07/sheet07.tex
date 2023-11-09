@@ -18,6 +18,8 @@
 \usepackage{tikz}  %% Pagacke to create graphics (graphs, automata, etc.)
 \usetikzlibrary{automata} %% Tikz library to draw automata
 \usetikzlibrary{arrows}   %% Tikz library for nicer arrow heads
+\usetikzlibrary{arrows.meta}   %% Tikz library for nicer arrow heads
+\usetikzlibrary{positioning}   %% Tikz library for nicer arrow heads
 
 
 %% Left side of header
@@ -59,6 +61,22 @@
 
 \section*{Exercise \homeworkNumber.3}
 
+\begin{tikzpicture}[->,>=Stealth,node distance=2cm,on grid,auto]
+	\node[circle, draw, inner sep=2pt] (A) {A};
+	\node[circle, draw, inner sep=2pt] (B) [right=of A] {B};
+	\node[circle, draw, inner sep=2pt] (C) [below=of B] {C};
+	\node[circle, draw, inner sep=2pt] (D) [below=of A] {D};
+	\node[circle, draw, inner sep=2pt] (E) [below=of D] {E};
+	\node[circle, draw, inner sep=2pt] (F) [right=of C] {F};
+
+	\draw (A) to (B);
+	\draw (C) to (B);
+	\draw (C) to (D);
+	\draw (C) to (F);
+	\draw (D) to (E);
+	\draw (E) to (C);
+	\draw (F) to (C);
+\end{tikzpicture}
 
 
 \section*{Exercise \homeworkNumber.4}
