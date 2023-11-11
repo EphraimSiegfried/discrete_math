@@ -54,7 +54,13 @@
 
 \begin{enumerate}[(a)]
 	\item
+		Given $a \equiv b $ (mod n) we want to show that $a*k \equiv b*k$ for all $k \in \mathbb Z$.\\
+		As $n \lvert a-b$ there exists a $c \in \mathbb Z$ so that $c*n = a-b$. \\
+		Multiplying both sides with $k \in \mathbb Z$ we get $kcn = k(a-b)$ and thus $kn \lvert k(a-b)$, which shows that $a*k \equiv b*k$.
 	\item
+		Given $a \equiv b $ (mod n) we want to show that $a^k \equiv b^k$ for all $k \in \mathbb N_0$. \\
+		As $n \lvert a-b$ there exists a $c \in \mathbb Z$ so that $c*n = a-b$. \\
+		Putting $k \in \mathbb N_0$ as exponent on both sides we get $(cn)^k = (a-b)^k$ and thus $n^k \lvert (a-b)^k$, which shows that $a^k \equiv b^k$.
 \end{enumerate}
 
 
@@ -91,9 +97,17 @@ satisfies the properties.
 
 \begin{enumerate}[(a)]
 	\item
+		$\langle D,B,C,B \rangle$
 	\item
+		$P1 = \langle A,B,C \rangle$ \\
+		$P2 = \langle C,B,A \rangle$ \\
+		$P3 = \langle D,B,C \rangle$ \\
+		$P4 = \langle D,B,A \rangle$ \\
 	\item
+		$\langle A,B,A,B,A \rangle$
 	\item
+		A, B, and C each have 2 cycles. D doesn't have a cycle. \\
+		There are 6 cycles in the graph of G.
 \end{enumerate}
 
 
