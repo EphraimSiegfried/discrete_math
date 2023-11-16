@@ -42,9 +42,10 @@
 \section*{Exercise \homeworkNumber.1}
 
 \begin{enumerate}[(a)]
-	\item
-	\item
-	\item
+	\item I will disprove the statement with a counterexample. Let \( G = (\left\{ a,b,c \right\}, \left\{ \left< a,b \right>, \left< b,c \right>\right\} )  \). It holds that \( \left< a,b \right> \in S_{G}^{1} = \left\{ \left< a,b \right>, \left< b,c \right> \right\} \), but it is not the case that \( \left< a,b \right> \in S_{G}^{2} = \left\{ \left< a,c \right> \right\}  \).
+	\item \( (\rightarrow) \) If \( n_{1}, n_{2} \) are mutually reachable, then there exist a walk from \( n_{1} \) to \( n_{2} \) and a walk from \( n_{2} \) to \( n_{1} \). We can combine these walks and walk from \( n_{1} \) to \( n_{1} \), which is a cycle containing \( n_{1},n_{2} \). \\
+	      \( (\leftarrow) \) If there exists a cycle involving \( n_{1} \) and \( n_{2} \), there exists a walk \( \pi = \left< n_{0},\ldots n_{1},\ldots ,n_{0} \right> \). We can decompose this walk by walking from \( n_{1} \) to \( n_{2} \), which means \( n_{1} \) reaches \( n_{2} \), and also walk from \( n_{2} \) to \( n_{1} \), which means \( n_{2} \) reaches \( n_{1} \). Hence \( n_{1} \) and \( n_{2} \) are mutually reachable.
+	\item If \( n_{1} \) and \( n_{2} \) are in the same strongly connected component, then they are mutually reachable. This implies that they are in a component, where for all vertices \( u,v \) in the component a walk \( (u,v) \) OR \( (v,u) \) exists, which means a reachability relation exists between \( u,v \). This also means that they are in the same equivalence class of the reachability relation, which implies that they are in a weakly connected component.
 \end{enumerate}
 
 
@@ -61,8 +62,8 @@
 \section*{Exercise \homeworkNumber.3}
 
 \begin{enumerate}[(a)]
-	\item
-	\item
+	\item Let \( L = \left\{ v \in V \mid v\text{ is a leaf } \right\} \). If we consider \( |V| = 3\), we have a (root) vertex \( r \in V \) which is connected to exactly two leaf vertices, since \( G \) is a tree. If we want to add a new vertex \( n \), we can only connect \( n \) to \( r \), since connecting it to another vertex, i.e. a leaf, would result in a path in \( G \) which is longer than 2. All the newly added vertices are leaves since they are only connected to \( r \) and therefore have degree 1. To calculate the number of leaves we can therefore count all vertices which are not the root, i.e. \( |L| = |V| - 1\).
+	\item Let \( L = \left\{ v \in V \mid v\text{ is a leaf } \right\} \). If the longest path in G has length \( |V| - 1\), then \( G \) is a path graph, i.e. a graph with two leaves and where the other vertices have vertex degree 2. To justify this, consider the following: The longest path has to visit all vertices since \( |V| - 1 = |E| \). If the graph had more than two leaves, then the longest path would not visit all vertices, since a path in a tree can only visit two leaves at most. Therefore the graph can only have 2 leaves, i.e. \( |L| = 2 \).
 \end{enumerate}
 
 
