@@ -18,6 +18,9 @@
 \usepackage{tikz}  %% Pagacke to create graphics (graphs, automata, etc.)
 \usetikzlibrary{automata} %% Tikz library to draw automata
 \usetikzlibrary{arrows}   %% Tikz library for nicer arrow heads
+\usetikzlibrary{arrows.meta}   %% Tikz library for nicer arrow heads
+\usetikzlibrary{positioning}   %% Tikz library for nicer arrow heads
+
 
 
 %% Left side of header
@@ -54,7 +57,15 @@
 
 \begin{enumerate}[(a)]
 	\item
+	We will prove this by contradiction. Assume a topological order exits for a Graph $G = (N,A)$ and $G$ is cyclic. \\
+	We look at three arcs $u,v,w \in A$ which form a cycle and propose a topological order $f(u)<f(v)<f(w)$.\\
+	But as these arcs form a cycle it also holds that $f(w) < f(u)$ which contradicts our assumption of a topological order. \\
+	Hence G has to be asyclic if a topological order exists for G.
 	\item
+	If $G = (N,A)$ is asyclic, then a node $v \in N$ exists which has $outdeg(v)=0$. \\
+	We now remove the node $v \in N$ from $G$ and the resulting $G_{-1}$ will also by asyclic as removing nodes doesn't introduce cycles. \\
+	As $G_{-1}$ is asyclic we can keep finding nodes with $outdeg(v)=0$ and remove them until no nodes are left.
+	Every $u \in indegree(N)$ has to be removed before the node is removed and since each node is removed in an order where $v < v_{-1}$ the arcs fulfill $f(u) < f(u_{-1})$ which is a topological order.
 \end{enumerate}
 
 
@@ -69,7 +80,20 @@
 
 
 \section*{Exercise \homeworkNumber.4}
+\begin{tikzpicture}[->,>=Stealth,node distance=2cm,on grid,auto]
+	\node[circle, draw, inner sep=2pt] (A) {A};
+	\node[circle, draw, inner sep=2pt] (B) [right=of A] {B};
+	\node[circle, draw, inner sep=2pt] (C) [below=of A] {C};
+	\node[circle, draw, inner sep=2pt] (D) [right=of C] {D};
+	\node[circle, draw, inner sep=2pt] (E) [below=of D] {E};
 
+	\draw (A) to (B);
+	\draw (D) to (C);
+	\draw (C) to (E);
+	\draw (E) to (D);
+
+
+\end{tikzpicture}
 
 
 
