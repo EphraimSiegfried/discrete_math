@@ -37,6 +37,11 @@
 \begin{document}
 
 \section*{Exercise \homeworkNumber.1}
+\begin{enumerate}
+	\item This statement is false. This will be shown with a counterexample.Let \( G =  (\left\{ a,b,c \right\},\left\{ \left\{ a,b \right\}, \left\{ b,c \right\}  \right\}    \). G is connected, because we can reach every vertex from every vertex. The Graph \( G' = (\left\{ a,c \right\}, \emptyset) \) is an induced subgraph of \( G \), since it is formed from a subset of the vertices from \( G \) and the vertices \( a,c \) are not connected in \( G \). \( G' \) is not connected. We have the case that \( G \) is connected but the induced graph \( G' \) is not connected. Therefore the statement is false.
+	\item This statement is correct. A forest is a graph without cycles, essentially a collection of trees. An induced subgraph of a forest will also be cycle-free, as removing vertices and their associated edges cannot create a cycle where there was none before. Therefore, any induced subgraph of a forest is also a forest.
+	\item If a graph is a tree, then it must also be connected. Because the statement in a) is false, this statement must also be false, i.e. it is not guaranteed that an induced graph of a connected graph is connected. But this would be required for the statement: "If G is a tree, then all its induced subgraphs are trees. "
+\end{enumerate}
 
 \section*{Exercise \homeworkNumber.2}
 
