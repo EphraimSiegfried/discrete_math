@@ -127,8 +127,15 @@ When we rearrange the nodes we can clearly see that it's a \( K_{5} \) graph. Th
 \section*{Exercise \homeworkNumber.4}
 
 \begin{enumerate}[(a)]
-	\item
-	\item
+	\item We will analyze the statement \( \phi = (((Y \land Z ) \to  X) \lor \lnot (X \lor  \lnot Z)) \)
+	      over \( \left\{ X,Y,Z \right\}  \). \\
+	      \textbf{Satisfiability}: Let \( \mathcal I = \left\{ X \mapsto 0, Y \mapsto 1, Z \mapsto 1 \right\}  \). We have \( \mathcal I \models X \) and \( \mathcal I \not\models Z \). From the definition of negation we have that \( \mathcal I \models \lnot Z \). Therefore, with the definition of disjuntion, we get \(  \mathcal I \not\models (X \lor \lnot Z ) \). With the definition of negation we have \(  \mathcal I \models \lnot (X \lor \lnot Z )\). With the definition of disjuntion we have \(  \mathcal I \models \psi \lor \lnot (X \lor \lnot Z )  \) for all formulas \( \psi \), in particular \( \mathcal I \models (((Y \land Z ) \to  X) \lor \lnot (X \lor  \lnot Z)) \). Therefore \( \phi \) is satisfiable. \\
+	      \textbf{Falsifiability}:  The statement \( \phi \) is by the definition of disjuntion and negation false, iff both \(  ((Y \land Z ) \to  X)\) and \( \lnot(X \lor  \lnot Z) \) are false. The formula \( ((Y \land Z ) \to  X) \) is only false, if \( \mathcal I = \left\{ X \mapsto 0, Y \mapsto 1, Z \mapsto 1 \right\}  \). But under this interpretation, the formula \( \lnot(X \lor  \lnot Z) \) is true. Therefore \( \phi \) can never be false. \\
+	      \textbf{Validness} The formula \( \phi \) is valid, since it can never be false. \\
+	      \textbf{Unsatisfiability} The formula is not unsatisfiable because it's satisfiable.
+
+
+	\item \( \phi = (A \land \lnot A) \land (B \land \lnot B) \)
 \end{enumerate}
 
 
