@@ -110,7 +110,13 @@ When we rearrange the nodes we can clearly see that it's a \( K_{5} \) graph. Th
 
 \begin{enumerate}[(a)]
 	\item
+	The syntactic interpretation is correct. \\
+	Semantically what the natural language means to say is: Eat now or (eat later then food cold).
+	Which would be: Eat Now $\lor($ eat later $\rightarrow$ food cold$)$.
 	\item
+	The syntactic interpretation is incorrect. What it expresses is Swimming $\rightarrow \neg$ Storm. \\
+	That is also the semantic meaning.
+
 \end{enumerate}
 
 
@@ -119,7 +125,23 @@ When we rearrange the nodes we can clearly see that it's a \( K_{5} \) graph. Th
 
 \begin{enumerate}[(a)]
 	\item
+	\( \mathcal I = \left\{ X \mapsto 0, Y \mapsto 1, Z \mapsto 0 \right\}  \).
 	\item
+	\begin{enumerate}[1)]
+		\item $\mathcal I \models Y$
+		\item $\mathcal I \not\models Z$
+		\item $\mathcal I \models \neg Z$
+		\item $\mathcal I \models Y \land \neg Z $ 
+		\item $\mathcal I \models  \psi \lor (Y \land \neg Z)$ for all formulas $\psi$.
+		\item $\mathcal I \not\models Y$
+		\item $\mathcal I \models \neg Y$
+		\item $\mathcal I \models \neg Y \lor \psi$ for all formulas $\psi$.
+		\item From 5) and 8) we get $\mathcal I \models  (\psi \lor (Y \land \neg Z)) \land (\neg Y \lor \psi)$ for all formulas $\psi$. \\
+		In particular $(X \lor (Y \land \neg Z)) \land (\neg Y \lor \neg X)$.
+	\end{enumerate}
+	\item 
+	\( \mathcal I = \left\{ X \mapsto 0, Y \mapsto 0, Z \mapsto 0 \right\}  \).
+
 \end{enumerate}
 
 
