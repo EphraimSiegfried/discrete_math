@@ -70,8 +70,9 @@ I will disprove the statement: Every single Literal is a clause and a monomial, 
 
 \section*{Exercise \homeworkNumber.5}
 \begin{enumerate}[(a)]
-	\item
-	\item
+	\item Because of distributivity we can transform the formula from CNF to DNF like this: \( \phi_n = \bigwedge\limits_{i=1}^{n}(a_{0} \lor a_i) \equiv \bigvee\limits_{S \in \mathcal{P}(\left\{ 1, \ldots ,n \right\} )}(a_{0} \land \bigwedge\limits_{i \in \left\{ 1, \ldots ,n \right\} } a_{i})\). Because the cardinality of the power set is \( \mathcal{P}({1,\ldots ,n}) = 2^n \), we will have \( 2^n \) monomials.
+	\item The equivalent form is \( \phi_n = \bigwedge\limits_{i=1}^{n}(a_{0} \lor a_i) \equiv a_{0} \lor \bigwedge\limits_{i=1}^{n}a_{i}\) and has has size polynomial in n. The equivalence can be explained by the fact that if \( a_{0} \) is true, the original formula is satisfied (since \( a_{0} \) appears in every clause of the CNF), and if \( a_{0} \) is false, then all \( a_i \) must be true for the original formula to be satisfied, which is exactly what the specified formula expresses.
+
 \end{enumerate}
 
 
