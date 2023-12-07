@@ -40,8 +40,14 @@
 
 
 \section*{Exercise \homeworkNumber.1}
-
-
+\begin{align*}
+	(\neg((\neg B \land D) \land (C \lor D)) \land (B \lor A)) & \equiv (\neg(\neg B \land (D \land (C \lor D)) \land (B \lor A))) & \text{(Associativity)}    \\
+	                                                           & \equiv (\neg(\neg B \land (D \land (D \lor C)) \land (B \lor A))) & \text{(Commutativity) }   \\
+	                                                           & \equiv (\neg(\neg B \land D) \land (B \lor A)))                   & \text{(Absorption) }      \\
+	                                                           & \equiv ((\neg\neg B \lor \neg D) \land (B \lor A))                & \text{ (De Morgan) }      \\
+	                                                           & \equiv ((B \lor \neg D) \land (B \lor A))                         & \text{(Double Negation) } \\
+	                                                           & \equiv (B \lor ( \neg D \land A))                                 & \text{(Distributivity) }  \\
+\end{align*}
 
 
 \section*{Exercise \homeworkNumber.2}
