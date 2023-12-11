@@ -59,13 +59,45 @@ I will disprove the statement: Every single Literal is a clause and a monomial, 
 \section*{Exercise \homeworkNumber.3}
 \begin{enumerate}[(a)]
 	\item
+	This formula describes a conjunction of disjunctions over all combinations of visited lectures.
+	If two or more lectures have been missed overall, then the conjunction is false.
 	\item
+	This formula describes a conjuction of the first formula in a) and a second formula which is a disjunction over all missed lectures.
+	The second formula is only false if all lectures have been visited. So overall theres only one possbility for the formula to be true: If only one lecture out of all has been missed.
 \end{enumerate}
 
 
 
 \section*{Exercise \homeworkNumber.4}
+\begin{enumerate}[Step(1)]
+	\item
+	\begin{itemize}
+		\item
+		$B \lor ((\neg A \lor C) \leftrightarrow B)$
+		\item
+		$B \lor (((\neg A \lor C)\rightarrow  B) \land (B \rightarrow (\neg A \lor C)))$
+		\item 
+		$B \lor ((( A \land \neg C) \lor  B) \land (\neg B \lor (\neg A \lor C)))$
+	\end{itemize}
+	\item
+	Already done.
+	\item 
+	\begin{itemize}
+		\item 
+		$ (B\lor ((A \land \neg C)\lor B)) \land ( B \lor ( \neg B \lor ( \neg A \lor C))) $
+		
+		\item 
+		$ (B\lor ((B \lor A)\land (B\lor \neg C))) \land ( B \lor ( B \lor (\neg B \lor \neg A)\land(\neg B \lor C))) $
+		\item 
+		$ (( B \lor B \lor A) \land ( B\lor ( B \lor \neg C))) \land ( (B \lor (\neg B \lor \neg A)) \land (B \lor  ( \neg B \lor C)))$
+	\end{itemize}
+		\item 
+		$ ((B \lor A) \land ( B \lor \neg C)) \land (\neg A \land C)$
 
+
+
+
+\end{enumerate}
 
 
 \section*{Exercise \homeworkNumber.5}
